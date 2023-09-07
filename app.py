@@ -18,7 +18,7 @@ def get_info():
     if abs(utc_offset_hours) > 2:
         return jsonify({"error":"UTC time offset exceeds +/-2 hours"}),400
     file_url = requests.get('https://api.github.com/repos/Prideland-Okoi/python-flask-endpoints/commits/HEAD').json()['url']
-    source_code_url = 'https://github.com/Prideland-Okoi/python-flask-endpoints'
+    source_code_url = 'https://github.com/prideland-okoi/python-flask-endpoints'
     json_response = {
         'slack_name': slack_name,
         'day_of_week': datetime.datetime.now().strftime("%A"),
