@@ -18,7 +18,7 @@ app.get('/api', (req, res) => {
   }
 
   // Other information
-  const githubFileUrl = "https://github.com/Prideland-Okoi/endpoints-task";
+  const githubFileUrl = "https://https://github.com/Prideland-Okoi/endpoints-task/blob/master/app.js";
   const githubSourceUrl = "https://github.com/Prideland-Okoi";
 
   // Create the response JSON
