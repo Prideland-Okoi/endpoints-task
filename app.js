@@ -11,15 +11,17 @@ app.get('/api', (req, res) => {
   }
 
   // Get current UTC time with validation of +/-2 hours
-  const currentUtcTime = new Date().toISOString().slice(0, 19)+'Z';
+  const now = new Date();
+  const currentUtcTime = now.toISOString().slice(0, 19) + 'Z';
   const utcOffsetHours = new Date().getTimezoneOffset() / 60;
   if (Math.abs(utcOffsetHours) > 2) {
-    return res.status(400).json({ error: "UTC time offset exceeds +/-2 hours" });
-  }
+     return res.status(400).json({ error: "UTC time offset exceeds +/-2 hours" });
+   }
+
 
   // Other information
   const githubFileUrl = "https://github.com/Prideland-Okoi/endpoints-task/blob/master/app.js";
-  const githubSourceUrl = "https://github.com/Prideland-Okoi";
+  const githubRepoUrl = "https://github.com/Prideland-Okoi";
 
   // Create the response JSON
   const response = {
@@ -28,7 +30,7 @@ app.get('/api', (req, res) => {
     utc_time: currentUtcTime,
     track: track,
     github_file_url: githubFileUrl,
-    github_repo_url: githubSourceUrl,
+    github_repo_url: githubRepoUrl,
     status_code: 200
   };
 
