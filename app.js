@@ -11,7 +11,7 @@ app.get('/api', (req, res) => {
   }
 
   // Get current UTC time with validation of +/-2 hours
-  const currentUtcTime = new Date().toISOString();
+  const currentUtcTime = new Date().toISOString().slice(0, -1);;
   const utcOffsetHours = new Date().getTimezoneOffset() / 60;
   if (Math.abs(utcOffsetHours) > 2) {
     return res.status(400).json({ error: "UTC time offset exceeds +/-2 hours" });
