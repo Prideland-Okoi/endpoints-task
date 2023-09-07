@@ -24,11 +24,11 @@ app.get('/api', (req, res) => {
   // Create the response JSON
   const response = {
     slack_name,
-    current_day_of_week: new Date().toLocaleDateString('en-US', { weekday: 'long' }),
-    current_utc_time: currentUtcTime,
-    track_specialization: track,
+    current_day: new Date().toLocaleDateString('en-US', { weekday: 'long' }),
+    utc_time: currentUtcTime,
+    track: track,
     github_file_url: githubFileUrl,
-    github_source_url: githubSourceUrl,
+    github_repo_url: githubSourceUrl,
     status_code: 200
   };
 
