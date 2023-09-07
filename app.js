@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
-app.get('/get_info', (req, res) => {
+app.get('/api', (req, res) => {
   const { slack_name, track } = req.query;
 
   const validTracks = ["frontend", "mobile", "design", "backend"];
