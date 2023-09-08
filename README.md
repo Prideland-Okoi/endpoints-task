@@ -51,10 +51,7 @@ Please follow these submission guidelines
  Get into your DM
  Type /grade <your-api-endpoint-url-with-the-query-parameters>
  E.g: /grade http://example.com/api?slack_name=example_name&track=backend
- Check your result
-
-                                                                Very Important.....
-
+ 
   Finaly, please use the provided Google Form. Within the form, share the URL of your hosted endpoint, along with the GitHub repository link of the file being run, and where the full source code can be found.
 
 Before submitting, do a final checkwith the grader bot to ensure that your endpoint is operational and meets the specified requirements. Incomplete or non-functional submissions may affect your evaluation.
